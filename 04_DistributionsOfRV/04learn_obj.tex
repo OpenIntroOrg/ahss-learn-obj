@@ -39,7 +39,7 @@
 
 \begin{document}
 
-{\LARGE \textcolor{oiB}{Learning Objectives \hfill Chapter 3: Distributions of random variables}} \\
+{\LARGE \textcolor{oiB}{Learning Objectives \hfill Chapter 4: Distributions of random variables}} \\
 
 \begin{enumerate}
 \renewcommand\labelenumi{\textcolor{oiB}{\textbf{LO \theenumi.}}}
@@ -63,7 +63,7 @@
 \vspace{-0.75cm}
 \begin{itemize}
 \renewcommand{\labelitemi}{{\textcolor{oiB}{$\ast$}}}
-\item Reading: Section 3.1 and 3.2 of OpenIntro Statistics
+\item Reading: Section 4.1 of Advanced High School Statistics
 \item Video: \href{http://www.youtube.com/watch?v=ev463hHe544}{Normal Distribution - Finding Probabilities - Dr.\c{C}etinkaya-Rundel, YouTube, 6:04}
 \item Video: \href{http://www.youtube.com/watch?v=6rAg4Y6NirU}{Normal Distribution - Finding Cutoff Points - Dr.\c{C}etinkaya-Rundel, YouTube, 4:25}
 \item Additional resources:
@@ -79,13 +79,67 @@
 %
 
 \vspace{0.48cm}
+\begin{enumerate}[resume]
+\renewcommand\labelenumi{\textcolor{oiB}{\textbf{LO \theenumi.}}}
+\item Calculate the sampling variability of the mean, the standard deviation of the sample mean, as $SD_{\bar{x}} = \frac{\sigma}{\sqrt{n}}$, where $\sigma$ is the population standard deviation.
 
+\item Recognize that the Central Limit Theorem (CLT) tells us about the \textit{shape} of the sampling distributions, and that given certain conditions, the distribution of the sample mean will be nearly normal.
+\begin{itemize}
+\item[-] In the case of the mean the CLT tells us that if
+\begin{itemize}[parsep=0pt]
+\item[(1a)] the sample size is sufficiently large $(n \ge 30)$ or
+\item[(1b)] the population is known to have a normal distribution
+\end{itemize}
+then the distribution of the sample mean will be nearly normal, centered at the true population mean and with a standard deviation of $\frac{\sigma}{\sqrt{n}}$.
+\item[-] The larger the sample size ($n$), the less important that the shape of the original distribution becomes, i.e. when $n$ is very large the sampling distribution will be nearly normal regardless of the shape of the population distribution.
+\end{itemize}
+\item Carry out probability calculations involving a sample mean by first checking that conditions for a normal distribution are met and them performing normal approximation, using the correct standard deviation in the denominator of the Z-score.
+\end{enumerate}
+
+
+\gray{
+{\it
+\vspace{-0.5cm}
+\begin{itemize}
+\renewcommand{\labelitemi}{{\textcolor{dark}{$\ast$}}}
+\item Reading: Section 4.2 of Advanced High School Statistics
+\item Videos: 
+\begin{itemize}
+\item \href{http://www.youtube.com/watch?v=dF18I7-Re4I}{Sample vs. sampling distribution, Dr. \c{C}etinkaya-Rundel} (9:30)
+\item \href{http://www.youtube.com/watch?v=Cvc8sYAKmtI}{Working with the CLT for means, Dr. \c{C}etinkaya-Rundel} (3:16)
+\item \href{http://www.youtube.com/watch?v=j4ZpJ0T6eFw&feature=autoplay&list=PL568547ACA9211CCA&playnext=1}{Distribution of the sample mean, YouTube} (6:17)
+\item \href{http://www.khanacademy.org/math/statistics/v/central-limit-theorem}{Central Limit Theorem, Khan Academy} (9:49)
+\item \href{http://www.khanacademy.org/math/statistics/v/sampling-distribution-of-the-sample-mean}{Sampling Distribution of the Mean, Khan Academy} (10:52)
+\end{itemize}
+\item Test yourself: 
+{\small
+\begin{enumerate}
+\item Suppose heights of all men in the US have a mean of 69.1 inches and a standard deviation of 2.9 inches. Would a randomly selected man who is 72 inches tall be considered unusually tall? Would it be unusual to have a random sample of 100 men where the sample average is 72 inches?
+\end{enumerate}
+}
+\end{itemize}
+}}
+
+
+
+\vspace{0.48cm}
 %
 
 \begin{enumerate}[resume]
 \renewcommand\labelenumi{\textcolor{oiB}{\textbf{LO \theenumi.}}}
 
-\item Determine if a random variable is binomial using the four conditions:
+%\item Determine if a random variable is binomial using the four conditions:
+%\begin{itemize}
+%\item[-] The trials are independent. 
+%\item[-] The number of trials, n, is fixed. 
+%\item[-] Each trial outcome can be classified as a success or failure. 
+%\item[-] The probability of a success, p, is the same for each trial. 
+%\end{itemize}
+%
+%\item Calculate the number of possible scenarios for obtaining $k$ successes in $n$ trials using the choose function: ${n \choose k} = \frac{n!}{k!~(n - k)!}$.
+%
+%\item Calculate probability of a given number of successes in a given number of trials using the binomial distribution: $P(k = K) = \frac{n!}{k!~(n - k)!}~p^k~(1-p)^{(n - k)}$. 
+\item Determine if a random variable follows a binomial distribution.  Recall from Chapter 3 that a variable is binomial if the following four conditions are met:
 \begin{itemize}
 \item[-] The trials are independent. 
 \item[-] The number of trials, n, is fixed. 
@@ -93,9 +147,7 @@
 \item[-] The probability of a success, p, is the same for each trial. 
 \end{itemize}
 
-\item Calculate the number of possible scenarios for obtaining $k$ successes in $n$ trials using the choose function: ${n \choose k} = \frac{n!}{k!~(n - k)!}$.
-
-\item Calculate probability of a given number of successes in a given number of trials using the binomial distribution: $P(k = K) = \frac{n!}{k!~(n - k)!}~p^k~(1-p)^{(n - k)}$. 
+\item Calculate the probabilities of the possible values of a binomial random variable using the binomial formula.  Recall that the sum of the probabilities must add to 1.
 
 \item Calculate the expected number of successes in a given number of binomial trials $(\mu = np)$ and its standard deviation $(\sigma = \sqrt{np(1-p)})$.
 
@@ -103,14 +155,14 @@
 
 \end{enumerate}
 
-%
+
 
 \gray{
 {\it
 \vspace{-0.75cm}
 \begin{itemize}
 \renewcommand{\labelitemi}{{\textcolor{oiB}{$\ast$}}}
-\item Reading: Section 3.4 of OpenIntro Statistics
+\item Reading: Section 4.4 of Advanced High School Statistics
 \item Video: \href{http://www.youtube.com/watch?v=tKmyzhvgudw}{Binomial Distribution - Finding Probabilities - Dr.\c{C}etinkaya-Rundel, YouTube, 8:46}
 \item Additional resources:
 \begin{itemize}
@@ -123,6 +175,33 @@
 \item True / False: If a family has 3 kids, there are 8 possible combinations of gender order.
 \item True/ False: When $n = 100$ and $p = 0.92$ we can use the normal approximation to the binomial to calculate the probability of 90 or more successes.
 \end{enumerate}
+\end{itemize}
+}}
+
+%
+
+\vspace{0.48cm}
+\begin{enumerate}[resume]
+\renewcommand\labelenumi{\textcolor{oiB}{\textbf{LO \theenumi.}}}
+\item Recognize that the sample proportion, $\hat{p}$, has a distribution and that its distribution is centered on the true population proportion, $p$.
+\item Calculate the sampling variability or standard deviation of the sample proportion, as \\$SD_{\hat{p}} = \sqrt{\frac{\hat{p}(1-\hat{p})}{n}}$.
+\item Recognize that the Central Limit Theorem (CLT) tells us about the \textit{shape} of the sampling distributions, and that given certain conditions, the distribution of the sample proportion will be nearly normal, specifically when $np\ge 10$ and $n(1-p)\ge 10$.
+\item Carry out probability calculations involving a sample proportion by first checking that conditions for a normal distribution are met and them performing normal approximation, using the correct standard deviation in the denominator of the Z-score.
+\end{enumerate}
+
+
+\gray{
+{\it
+\vspace{-0.5cm}
+\begin{itemize}
+\renewcommand{\labelitemi}{{\textcolor{dark}{$\ast$}}}
+\item Reading: Section 4.5 of Advanced High School Statistics
+\item Test yourself: 
+{\small
+\begin{enumerate}
+\item Suppose 45\% of voters in a particular county favor a proposition for an increase in property tax.  If a researcher takes a random sample of 40 people, what is the probability that greater than 50\% of the sample will favor the proposition (thus leading the researcher to incorrectly believe that more than half of the voters are in favor)?  
+\end{enumerate}
+}
 \end{itemize}
 }}
 
