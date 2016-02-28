@@ -38,6 +38,9 @@
 
 \begin{document}
 
+{\LARGE \textcolor{oiB}{Learning Objectives \hfill Chapter 3: Probability}} \\
+
+
 \begin{enumerate}
 \renewcommand\labelenumi{\textcolor{light}{\textbf{LO \theenumi.}}}
 
@@ -57,26 +60,26 @@
 \item Define a probability distribution as a list of the possible outcomes with corresponding probabilities that satisfies three rules: 
 \begin{itemize}
 \item[-] The outcomes listed must be disjoint. 
-\item[-] Each probability must be between 0 and 1.
+\item[-] Each probability must be between 0 and 1, inclusive.
 \item[-] The probabilities must total 1. 
 \end{itemize}
 
 \item Define complementary outcomes as mutually exclusive outcomes of the same random process whose probabilities add up to 1. 
 \begin{itemize}
-\item[-] If A and B are complementary, P(A) + P(B) = 1 
+\item[-] If A and B are complementary, $ P(A) + P(B) = 1$. 
 \end{itemize}
 
 \item Distinguish between union of events (A or B) and intersection of events (A and B).
 \begin{itemize}
 \item[-] Calculate the probability of union of events using the (general) addition rule.
 \begin{itemize}
-\item[+] If A and B are not mutually exclusive, P(A or B) = P(A) + P(B) ? P(A and B) 
-\item[+] If A and B are mutually exclusive, P (A or B) = P (A) + P (B), since for mutually exclusive events P(A and B) = 0 
+\item[+] If A and B are not mutually exclusive, $P(A \text{ or } B) = P(A) + P(B) - P(A \text{ and } B)$ 
+\item[+] If A and B are mutually exclusive, $P(A \text{ or } B) = P (A) + P (B)$, since for mutually exclusive events $P(A \text{ and } B) = 0$.
 \end{itemize}
 \item[-] Calculate the probability of intersection of independent events using the multiplication rule.
 \begin{itemize}
-\item[+] If A and B are independent, P(A and B) = P(A) ? P(B) 
-\item[+] If A and B are dependent, P(A and B) = P(A|B) ? P(B) 
+\item[+] If A and B are dependent, $P(A \text{ and } B) = P(A) \times P(B | A)$
+\item[+] If A and B are independent, $P(A \text{ and } B) = P(A) \times P(B)$,  since for independent events $P(B|A)=P(B)$.
 \end{itemize}
 \end{itemize}
 
@@ -87,7 +90,7 @@
 \vspace{-0.75cm}
 \begin{itemize}
 \renewcommand{\labelitemi}{{\textcolor{dark}{$\ast$}}}
-\item Reading: Section 2.1 of OpenIntro Statistics
+\item Reading: Section 3.1 of Advanced High School Statistics
 \item Videos:
 \begin{itemize}
 \item \href{http://www.youtube.com/watch?v=zMv-zcO8Jmk}{Basics of probability}, YouTube (1:42) 
@@ -124,7 +127,7 @@
 \vspace{-0.75cm}
 \begin{itemize}
 \renewcommand{\labelitemi}{{\textcolor{dark}{$\ast$}}}
-\item Reading: Section 2.2 of OpenIntro Statistics
+\item Reading: Section 3.2 of Advanced High School Statistics
 \item Videos:
 \begin{itemize}
 \item \href{http://www.youtube.com/watch?v=HxEz4ZHUY5Y}{Probability trees}, Dr.\c{C}etinkaya-Rundel (8:23)
@@ -135,5 +138,92 @@
 \item Test yourself: 50\% of students in a class are social science majors and the rest are not. 70\% of the social science students and 40\% of the non-social science students are in a relationship. Create a contingency table and a tree diagram summarizing these probabilities. Calculate the percentage of students in this class who are in a relationship.
 \end{itemize}
 }}
+
+%
+
+\vspace{0.48cm}
+
+%
+
+\begin{enumerate}[resume]
+\renewcommand\labelenumi{\textcolor{light}{\textbf{LO \theenumi.}}}
+\item Determine if a random variable is binomial using the four conditions:
+\begin{itemize}
+\item[-] The trials are independent. 
+\item[-] The number of trials, n, is fixed. 
+\item[-] Each trial outcome can be classified as a success or failure. 
+\item[-] The probability of a success, p, is the same for each trial. 
+\end{itemize}
+
+\item Calculate the number of possible scenarios for obtaining $k$ successes in $n$ trials using the choose function: ${n \choose k} = \frac{n!}{k!~(n - k)!}$.
+
+\item Calculate probability of a given number of successes in a given number of trials using the binomial distribution: $P(K = k) = \frac{n!}{k!~(n - k)!}~p^k~(1-p)^{(n - k)}$. 
+
+\end{enumerate}
+
+%
+\gray{
+{\it
+\vspace{-0.75cm}
+\begin{itemize}
+\renewcommand{\labelitemi}{{\textcolor{dark}{$\ast$}}}
+\item Reading: Section 3.3 of Advanced High School Statistics
+\item Test yourself: A bin contains 30 balls.  15 are Red, 10 are Green and 5 are Blue.  12 draws are made with replacement from the bin.  Verify that the binomial formula can be used, and then calculate the probability that exactly 6 of the 12 draws are Red.
+\end{itemize}
+}}
+
+%
+
+\vspace{0.48cm}
+
+%
+
+\begin{enumerate}[resume]
+\renewcommand\labelenumi{\textcolor{light}{\textbf{LO \theenumi.}}}
+
+\item Carry out a simulation using a random digit table.  This involves:
+\begin{itemize}
+\item[-] Assigning digits to represent outcomes
+\item[-] Simulating many repetitions using the random digit table, stopping when appropriate.
+\item[-] Using results to estimate desired quantity.
+\end{itemize}
+\end{enumerate}
+
+%
+\gray{
+{\it
+\vspace{-0.75cm}
+\begin{itemize}
+\renewcommand{\labelitemi}{{\textcolor{dark}{$\ast$}}}
+\item Reading: Section 3.4 of Advanced High School Statistics
+\item Test yourself: A bin contains 30 balls.  15 are Red, 10 are Green and 5 are Blue.  12 draws are made with replacement from the bin.  Use a random digit table to estimate the probability that exactly 6 of the 12 draws are Red.  Repeat your simulation for 20 trials.  What is your estimate?  How does this estimate compare to the true probability calculated in the ``Test yourself" question from the previous section on the Binomial Formula?
+\end{itemize}
+}}
+
+
+%
+
+\vspace{0.48cm}
+
+%
+
+\begin{enumerate}[resume]
+\renewcommand\labelenumi{\textcolor{light}{\textbf{LO \theenumi.}}}
+
+\item Random Variables
+\end{enumerate}
+
+%
+\gray{
+{\it
+\vspace{-0.75cm}
+\begin{itemize}
+\renewcommand{\labelitemi}{{\textcolor{dark}{$\ast$}}}
+\item Reading: Section 3.5 of Advanced High School Statistics
+\item Test yourself: 
+\end{itemize}
+}}
+
+
 
 \end{document}
